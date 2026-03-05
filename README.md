@@ -54,11 +54,7 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 
-### Download NLTK data (one-time)
-
-```powershell
-python -c "import nltk; nltk.download('punkt_tab'); nltk.download('wordnet'); nltk.download('omw-1.4')"
-```
+The required NLTK data (`punkt_tab`, `wordnet`, `omw-1.4`) is downloaded automatically the first time you run `main.py`.
 
 ---
 

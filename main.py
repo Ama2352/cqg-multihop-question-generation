@@ -95,6 +95,11 @@ from torch.utils.data import DataLoader
 from tqdm import tqdm
 from utils.util import get_optimizers, clip_gradients
 import nltk
+for _nltk_res in ['punkt_tab', 'wordnet', 'omw-1.4']:
+    try:
+        nltk.data.find(f'tokenizers/{_nltk_res}' if _nltk_res == 'punkt_tab' else f'corpora/{_nltk_res}')
+    except LookupError:
+        nltk.download(_nltk_res, quiet=True)
 import os
 
 
